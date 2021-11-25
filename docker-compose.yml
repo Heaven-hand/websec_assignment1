@@ -15,6 +15,7 @@ services:
         ipv4_address: 10.0.0.2
     volumes:
       -  ./host1:/data
+      -  ./node_modules:/data/node_modules
 
   host2:
     image: node
@@ -25,12 +26,14 @@ services:
       - -c 
       - |
         cd /data
+        
         node server.js
     networks:
       WSnetwork:
         ipv4_address: 10.0.0.3
     volumes:
       -  ./host2:/data
+      -  ./node_modules:/data/node_modules
 
   host3:
     image: node
@@ -47,6 +50,7 @@ services:
         ipv4_address: 10.0.0.4
     volumes:
       -  ./host3:/data
+      -  ./node_modules:/data/node_modules
       
 
 networks:        

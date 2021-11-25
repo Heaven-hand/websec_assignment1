@@ -1,0 +1,14 @@
+<html>
+<body>
+
+<h4> GET time from "time.cybersecurity.seu.edu" JSONP</h4>
+
+<script type="text/javascript">
+  function jsonpCallback(res) {
+    console.log(res)
+    alert(res)
+  }
+</script>
+<script src="http://time.cybersecurity.seu.edu/api/jsonpdate?callback=jsonpCallback"></script>
+</body>
+</html>
